@@ -67,15 +67,24 @@ class _MyHomePageState extends State<MyHomePage> {
             ), //Texto grande para mostrar el resultado
           ),
           Expanded(
+            //Este Expanded hace que el GridView ocupe todo el espacio disponible
             child: Column(
+              //Usamos Column para organizar los botones en filas
               children: [
+                //Cada fila es un Row con varios botones
                 Expanded(
+                  //Cada fila ocupa el mismo espacio vertical
                   child: Row(
                     children: [
-                      Expanded(child: Center(child: Icon(Icons.backspace))),
+                      Expanded(
+                        child: Center(child: Icon(Icons.backspace)),
+                      ), //Icono de retroceso
                       Expanded(
                         child: Center(
-                          child: Text("AC", style: TextStyle(fontSize: 28)),
+                          child: Text(
+                            "AC",
+                            style: TextStyle(fontSize: 28),
+                          ), //Apartir de acá se pone el fontSize de todos los textos en 28
                         ),
                       ),
                       Expanded(
