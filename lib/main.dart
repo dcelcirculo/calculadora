@@ -49,16 +49,44 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Row(
                 children: [
-                  Icon(Icons.backspace),
-                  Text("AC"),
-                  Text("%"),
-                  Text("÷"),
+                  Expanded(child: Icon(Icons.backspace)),
+                  Expanded(child: Text("AC")),
+                  Expanded(child: Text("%")),
+                  Expanded(child: Text("÷")),
                 ],
               ),
-              Row(children: [Text("7"), Text("8"), Text("9"), Text("X")]),
-              Row(children: [Text("4"), Text("5"), Text("6"), Text("-")]),
-              Row(children: [Text("1"), Text("2"), Text("3"), Text("+")]),
-              Row(children: [Text("+/-"), Text("0"), Text("."), Text("=")]),
+              Row(
+                children: [
+                  Expanded(child: Text("7")),
+                  Expanded(child: Text("8")),
+                  Expanded(child: Text("9")),
+                  Expanded(child: Text("X")),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(child: Text("4")),
+                  Expanded(child: Text("5")),
+                  Expanded(child: Text("6")),
+                  Expanded(child: Text("-")),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(child: Text("1")),
+                  Expanded(child: Text("2")),
+                  Expanded(child: Text("3")),
+                  Expanded(child: Text("+")),
+                ],
+              ),
+              Row(
+                children: [
+                  Expanded(child: Text("+/-")),
+                  Expanded(child: Text("0")),
+                  Expanded(child: Text(".")),
+                  Expanded(child: Text("=")),
+                ],
+              ),
             ],
           ),
         ],
