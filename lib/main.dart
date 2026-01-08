@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       // Configura el tema visual de la aplicación
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(
-          seedColor: Colors.green,
+          seedColor: Colors.purple,
         ), // Es el color para el tema principal de la página
       ),
       // Define la pantalla inicial de la aplicación
