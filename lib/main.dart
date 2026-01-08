@@ -44,7 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Column(
         children: [
-          Container(child: Text("0")),
+          Container(
+            width: double.infinity, //Para que ocupe todo el ancho
+            padding: const EdgeInsets.all(20), //Espacio interno
+            alignment:
+                Alignment.centerRight, //Alineación del texto a la derecha
+            child: const Text("0", style: TextStyle(fontSize: 48)),
+          ),
           Column(
             children: [
               Row(
