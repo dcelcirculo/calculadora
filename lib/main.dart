@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Calculadora',
       // Configura el tema visual de la aplicación
       theme: ThemeData(
-        colorScheme: .fromSeed(
+        colorScheme: ColorScheme.fromSeed(
           seedColor: Colors.green,
         ), // Es el color para el tema principal de la página
       ),
@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// Widget sin estado que define la estructura de la página principal
+// Widget con estado que define la estructura de la página principal
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -66,49 +66,61 @@ class _MyHomePageState extends State<MyHomePage> {
               style: TextStyle(fontSize: 48),
             ), //Texto grande para mostrar el resultado
           ),
-          Column(
-            children: [
-              Row(
-                children: [
-                  Expanded(child: Icon(Icons.backspace)), //Icono de retroceso
-                  Expanded(child: Text("AC")),
-                  Expanded(child: Text("%")),
-                  Expanded(child: Text("÷")),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(child: Text("7")),
-                  Expanded(child: Text("8")),
-                  Expanded(child: Text("9")),
-                  Expanded(child: Text("×")),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(child: Text("4")),
-                  Expanded(child: Text("5")),
-                  Expanded(child: Text("6")),
-                  Expanded(child: Text("-")),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(child: Text("1")),
-                  Expanded(child: Text("2")),
-                  Expanded(child: Text("3")),
-                  Expanded(child: Text("+")),
-                ],
-              ),
-              Row(
-                children: [
-                  Expanded(child: Text("+/-")),
-                  Expanded(child: Text("0")),
-                  Expanded(child: Text(".")),
-                  Expanded(child: Text("=")),
-                ],
-              ),
-            ],
+          Expanded(
+            child: Column(
+              children: [
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(child: Center(child: Icon(Icons.backspace))),
+                      Expanded(child: Center(child: Text("AC"))),
+                      Expanded(child: Center(child: Text("%"))),
+                      Expanded(child: Center(child: Text("÷"))),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(child: Center(child: Text("7"))),
+                      Expanded(child: Center(child: Text("8"))),
+                      Expanded(child: Center(child: Text("9"))),
+                      Expanded(child: Center(child: Text("×"))),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(child: Center(child: Text("4"))),
+                      Expanded(child: Center(child: Text("5"))),
+                      Expanded(child: Center(child: Text("6"))),
+                      Expanded(child: Center(child: Text("-"))),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(child: Center(child: Text("1"))),
+                      Expanded(child: Center(child: Text("2"))),
+                      Expanded(child: Center(child: Text("3"))),
+                      Expanded(child: Center(child: Text("+"))),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: Row(
+                    children: [
+                      Expanded(child: Center(child: Text("+/-"))),
+                      Expanded(child: Center(child: Text("0"))),
+                      Expanded(child: Center(child: Text("."))),
+                      Expanded(child: Center(child: Text("="))),
+                    ],
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
